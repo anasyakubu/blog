@@ -6,7 +6,7 @@ import Link from "next/link";
 const ArticlesListCard = () => {
   return (
     <div className="ArticlesListCard">
-      <div className="p-3 m-3 bg-white text-black border border-black rounded-xl shadow-xl">
+      <div className="p-3 m-2 bg-white text-black border border-black rounded-xl shadow-xl">
         <div className="">
           <div className="flex gap-5">
             <span>/</span>

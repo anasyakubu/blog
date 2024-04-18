@@ -4,13 +4,14 @@ import Image from "next/image";
 import User from "../../assets/user-1.jpg";
 import { Button } from "@/components/ui/button";
 import Link from "next/link";
+import "./ArticlesList.scss";
 
 const ArticlesList = () => {
   return (
     <div className="ArticlesList">
       <div className="p-10">
         <div className="flex flex-col md:flex-row">
-          <div className="w-full md:w-2/3 mb-4 md:mb-0">
+          <div className="w-full md:w-2/3 mb-4 md:mb-0 m-2">
             {/* <!-- Content for the 2/3 width section --> */}
             <div className="">
               {/* user image and details */}
