@@ -11,7 +11,7 @@ const HomeHeader = () => {
             <h1 className="text-3xl font-semibold text-black sm:py-10">
               <span
                 className="text-4xl md:text-[5rem] font-bold mt-1 leading-none"
-                style={{ lineHeight: "2rem" }}
+                style={{ lineHeight: "7rem" }}
               >
                 We Help Writers Succeed in the Creator Economy
               </span>
