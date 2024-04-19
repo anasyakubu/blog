@@ -30,7 +30,9 @@ const ArticlesListCard = () => {
                   How To Optimize Your Website For Local Search in 2024 SEO
                 </Link>
               </h2>
-              <p className="mt-5 text-sm p-2">Copy Writing Marketing</p>
+              <p className="mt-5 text-sm font-light p-2">
+                Copy Writing Marketing
+              </p>
             </div>
           </div>
         </div>
