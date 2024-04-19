@@ -13,12 +13,6 @@ export async function addSubscribers(formData) {
   const {
     data: { session },
   } = await supabase.auth.getSession();
-  // const user = session?.user;
-
-  // if (!user) {
-  //   console.error("User is not authenticated within addWatch server action");
-  //   return;
-  // }
 
   const { data, error } = await supabase.from("subscribers").insert([
     {
@@ -32,13 +26,11 @@ export async function addSubscribers(formData) {
   }
 
   revalidatePath("/");
-  // formData = "";
+  //  formData = "";
 
-  // Swal.fire({
-  //   title: "Good job!",
-  //   title: "Thank you for Subscribing!",
-  //   icon: "success",
-  // });
-
+  Swal.fire({
+    title: "Thank you for Subscribing!",
+    icon: "success",
+  });
   return { message: "Success" };
 }
