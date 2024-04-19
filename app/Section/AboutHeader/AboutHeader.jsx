@@ -1,7 +1,7 @@
-import Nav from "@/components/shared/Nav";
+import Nav from "../../../components/shared/Nav";
 import React from "react";
 import "./AboutHeader.scss";
-import { Button } from "@/components/ui/button";
+// import { Button } from "../../../components/ui/button";
 import Image from "next/image";
 import BannerOne from "../../assets/Banner-1.svg";
 
