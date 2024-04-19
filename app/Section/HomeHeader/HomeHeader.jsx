@@ -4,6 +4,7 @@ import "./HomeHeader.scss";
 import { Button } from "@/components/ui/button";
 import Image from "next/image";
 import NYM from "../../assets/nym.png";
+import { addSubscribers } from "../../server-action/addSubscribers";
 
 const HomeHeader = () => {
   return (
@@ -32,21 +33,25 @@ const HomeHeader = () => {
                 our free guide, The Killer and the Poet:
               </h6>
               <div className="mt-3">
-                <input
-                  className="w-full h-full p-5 m-1 outline-none border border-black rounded-xl"
-                  type="text"
-                  placeholder="Email Address"
-                />
-                <div className="mt-4">
-                  <Button className="w-full h-full p-3 text-md">
-                    Subscribe Now
-                  </Button>
-                </div>
-                <div className="mt-4">
-                  <h6 className="text-black text-sm font-medium">
-                    We won`t send you spam. Unsubscribe at any time.
-                  </h6>
-                </div>
+                <form action={addSubscribers}>
+                  <input
+                    className="w-full h-full p-5 m-1 outline-none border border-black rounded-xl"
+                    type="text"
+                    id="email"
+                    name="email"
+                    placeholder="Email Address"
+                  />
+                  <div className="mt-4">
+                    <Button type="submit" className="w-full h-full p-3 text-md">
+                      Subscribe Now
+                    </Button>
+                  </div>
+                  <div className="mt-4">
+                    <h6 className="text-black text-sm font-medium">
+                      We won`t send you spam. Unsubscribe at any time.
+                    </h6>
+                  </div>
+                </form>
               </div>
             </div>
           </div>

@@ -3,6 +3,7 @@ import "./Subscribe.scss";
 import { Button } from "@/components/ui/button";
 import Image from "next/image";
 import NYM from "../../assets/nym.png";
+import { addSubscribers } from "../../server-action/addSubscribers";
 
 const Subscribe = () => {
   return (
@@ -22,10 +23,12 @@ const Subscribe = () => {
                   <input
                     className="w-full h-full p-5 m-1 outline-none border border-black rounded-xl"
                     type="text"
+                    id="email"
+                    name="email"
                     placeholder="Email Address"
                   />
                   <div className="mt-4">
-                    <Button className="w-full h-full p-3 text-md">
+                    <Button type="submit" className="w-full h-full p-3 text-md">
                       Subscribe Now
                     </Button>
                   </div>
