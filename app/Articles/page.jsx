@@ -1,4 +1,4 @@
-import Nav from "@/components/shared/Nav";
+import Nav from "../../components/shared/Nav";
 import ArticlesListPage from "../Section/ArticlesListPage/ArticlesListPage";
 import Footer from "../Section/Footer/Footer";
 import Subscribe from "../Section/Subscribe/Subscribe";
