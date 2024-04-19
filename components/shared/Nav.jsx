@@ -7,9 +7,10 @@ import Link from "next/link";
 // import Logo from "../../app/assets/ai-logo.png";
 
 const navigation = [
+  { name: "Home", href: "/" },
   { name: "Articles", href: "/Articles" },
   { name: "About", href: "/About" },
-  { name: "Services", href: "/Services" },
+  { name: "Github", href: "https://github.com/anasyakubu", target: "_blank" },
   { name: "Contact", href: "/Contact" },
 ];
 
@@ -45,6 +46,7 @@ export default function Nav() {
               <a
                 key={item.name}
                 href={item.href}
+                target={item.target}
                 className="text-sm font-semibold leading-6 text-black"
               >
                 {item.name}
