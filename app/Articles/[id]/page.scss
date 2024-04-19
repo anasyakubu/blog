@@ -1,0 +1,32 @@
+.Read {
+  h1 {
+    span {
+      line-height: 5rem;
+    }
+  }
+}
+
+@media (max-width: 600px) {
+  .Read {
+    .p-20 {
+      padding: 3%;
+      padding-top: 5%;
+    }
+    .p-24 {
+      padding: 5%;
+      // padding-top: 5%;
+    }
+    .m-10 {
+      margin: 2%;
+      margin-top: 5%;
+    }
+    br {
+      visibility: hidden;
+    }
+    h1 {
+      span {
+        line-height: 3rem;
+      }
+    }
+  }
+}

@@ -1,10 +1,11 @@
 import React from "react";
-import { Button } from "@/components/ui/button";
+// import { Button } from "@/components/ui/button";
+import "./page.scss";
 import Image from "next/image";
-import BannerOne from "../../assets/Banner-1.svg";
-import Nav from "@/components/shared/Nav";
-import Subscribe from "@/app/Section/Subscribe/Subscribe";
-import Footer from "@/app/Section/Footer/Footer";
+import BannerOne from "../../../app/assets/Sharing articles-bro.svg";
+import Nav from "../../../components/shared/Nav";
+import Subscribe from "../../Section/Subscribe/Subscribe";
+import Footer from "../../Section/Footer/Footer";
 
 const Read = async ({ params: { id } }) => {
   console.log(id);
