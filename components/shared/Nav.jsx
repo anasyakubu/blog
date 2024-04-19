@@ -11,7 +11,8 @@ const navigation = [
   { name: "Articles", href: "/Articles" },
   { name: "About", href: "/About" },
   { name: "Github", href: "https://github.com/anasyakubu", target: "_blank" },
-  { name: "Contact", href: "/Contact" },
+  { name: "Feedbacks", href: "/Feedbacks" },
+  { name: "Profile", href: "/Profile" },
 ];
 
 export default function Nav() {
