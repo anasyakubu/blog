@@ -1,8 +1,8 @@
-import ArticlesListCard from "@/components/shared/ArticlesListCard";
+import ArticlesListCard from "../../../components/shared/ArticlesListCard";
 import React from "react";
 import Image from "next/image";
 import User from "../../assets/user-1.jpg";
-import { Button } from "@/components/ui/button";
+import { Button } from "../../../components/ui/button";
 import Link from "next/link";
 import "./ArticlesListPage.scss";
 
