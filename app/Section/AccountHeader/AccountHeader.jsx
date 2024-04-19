@@ -1,5 +1,5 @@
-import Nav from "@/components/shared/Nav";
-import { Button } from "@/components/ui/button";
+import Nav from "../../../components/shared/Nav";
+import { Button } from "../../../components/ui/button";
 import Image from "next/image";
 import Link from "next/link";
 import React from "react";
