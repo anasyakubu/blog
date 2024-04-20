@@ -1,6 +1,6 @@
 import React from "react";
 import "./AccountArticlesList.scss";
-import AccountArticlesListCard from "@/components/shared/AccountArticlesListCard";
+import AccountArticlesListCard from "../../../components/shared/AccountArticlesListCard";
 
 const AccountArticlesList = () => {
   return (

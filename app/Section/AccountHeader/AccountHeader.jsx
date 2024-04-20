@@ -28,16 +28,23 @@ const AccountHeader = () => {
                   consectetur adipisicing elit. Suscipit pariatur maiores culpa
                   quaerat nulla quia iure tenetur officiis ipsam vitae?
                 </p>
-                <div className="mt-6">
+                <div className="mt-6 flex gap-5">
                   <Link href="/">
-                    <Button className="bg-white text-black">Read More</Button>
+                    <Button className="bg-white text-black hover:bg-[#f4f4f4]">
+                      Read More
+                    </Button>
+                  </Link>
+                  <Link href="/Articles/Add">
+                    <Button className="bg-white text-black hover:bg-[#f4f4f4]">
+                      Add Post
+                    </Button>
                   </Link>
                 </div>
               </div>
               {/* img */}
-              <div className="flex justify-center">
+              {/* <div className="flex justify-center">
                 <Image className="w-64" src={BannerTwo} alt="Banner 2" />
-              </div>
+              </div> */}
             </div>
           </div>
         </div>

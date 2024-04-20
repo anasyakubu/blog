@@ -1,7 +1,7 @@
-import Nav from "@/components/shared/Nav";
+import Nav from "../../../components/shared/Nav";
 import React from "react";
 import "./HomeHeader.scss";
-import { Button } from "@/components/ui/button";
+import { Button } from "../../../components/ui/button";
 import Image from "next/image";
 import NYM from "../../assets/nym.png";
 import { addSubscribers } from "../../server-action/addSubscribers";

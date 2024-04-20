@@ -3,6 +3,7 @@ import React from "react";
 import "./page.scss";
 import Image from "next/image";
 import BannerOne from "../../../app/assets/Sharing articles-bro.svg";
+import User from "../../../app/assets/user-1.jpg";
 import Nav from "../../../components/shared/Nav";
 import Subscribe from "../../Section/Subscribe/Subscribe";
 import Footer from "../../Section/Footer/Footer";
@@ -16,6 +17,7 @@ const Read = async ({ params: { id } }) => {
         <Nav />
         <div className="lg:px-6 py-1">
           <div className="text-center pt-5 p-20">
+            {/*  */}
             <div className="">
               <h1
                 className="text-3xl font-extrabold text-black sm:py-5"
@@ -32,7 +34,23 @@ const Read = async ({ params: { id } }) => {
             <div className="mt-1 flex justify-center text-center">
               <Image src={BannerOne} alt="Image" />
             </div>
-            <div className="">
+            {/* User */}
+            <div className="text-center flex justify-center">
+              <div className="flex gap-4">
+                <Image
+                  className="h-10 w-10 rounded-full"
+                  src={User}
+                  alt="User"
+                />
+                <span className="py-3 text-black text-sm font-semibold">
+                  Anas Yakubu /{" "}
+                </span>
+                <span className="py-3 text-black text-sm font-semibold">
+                  April 11 2024
+                </span>
+              </div>
+            </div>
+            <div className="mt-5">
               <h3 className="text-black font-semibold text-xl">
                 Email marketing is one of the most popular marketing channels
                 because it’s relatively easy to use, highly effective, and
