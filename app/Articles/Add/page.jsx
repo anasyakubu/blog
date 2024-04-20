@@ -3,6 +3,8 @@ import "./page.scss";
 import Nav from "../../../components/shared/Nav";
 import Footer from "../../Section/Footer/Footer";
 import { Button } from "../../../components/ui/button";
+import Image from "next/image";
+import Robot from "../../assets/Android-pana.svg";
 
 const Add = () => {
   return (
@@ -46,7 +48,23 @@ const Add = () => {
                   </form>
                 </div>
               </div>
-              <div className=""></div>
+              {/*  */}
+              <div className="flex justify-center">
+                <div className="py-10">
+                  <Image className="w-72" src={Robot} alt="Robot" />
+                  <div className="mt-5 text-center">
+                    <p className="text-xl text-black font-semibold">
+                      Use AI to create an Article
+                    </p>
+                    <p className="text-sm mt-2">
+                      Enter a Title to use AI to generate and Article
+                    </p>
+                    <div className="mt-5">
+                      <Button>Generate Article</Button>
+                    </div>
+                  </div>
+                </div>
+              </div>
             </div>
           </div>
         </div>
