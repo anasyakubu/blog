@@ -28,9 +28,7 @@ const ArticlesList = ({ userImg, user, id, title, created_at }) => {
                   {" "}
                   by{" "}
                   <small className="font-semibold underline">
-                    <Link href="http://localhost:3000/Profile/222">
-                      Anas Yakubu
-                    </Link>
+                    <Link href="/Profile/222">Anas Yakubu</Link>
                   </small>{" "}
                   on <b>April 11, 2024</b>
                 </span>
@@ -40,7 +38,7 @@ const ArticlesList = ({ userImg, user, id, title, created_at }) => {
                   className="text-2xl font-bold text-black hover:underline"
                   style={{ fontSize: "2rem", lineHeight: "2rem" }}
                 >
-                  <Link href="http://localhost:3000/Articles/100">
+                  <Link href="/Articles/100">
                     The Ultimate Guide To Email Marketing
                   </Link>
                 </h2>
@@ -54,7 +52,7 @@ const ArticlesList = ({ userImg, user, id, title, created_at }) => {
                 </p>
               </div>
               <div className="mt-5">
-                <Link href="http://localhost:3000/Profile/222">
+                <Link href="/Profile/222">
                   <Button>Continue Reading</Button>
                 </Link>
               </div>

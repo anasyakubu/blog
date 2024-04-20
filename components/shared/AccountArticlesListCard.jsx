@@ -16,7 +16,7 @@ const AccountArticlesListCard = ({ userImg, user, id, title, created_at }) => {
             </span>
             <span className="text-xl py-2 font-light">
               <small className="font-semibold ">
-                <Link href="http://localhost:3000/Profile/222">Me</Link>
+                <Link href="/Profile/222">Me</Link>
               </small>{" "}
             </span>
           </div>
@@ -29,7 +29,7 @@ const AccountArticlesListCard = ({ userImg, user, id, title, created_at }) => {
                 className="text-2xl font-bold text-black hover:underline"
                 style={{ fontSize: "1.5rem", lineHeight: "2.2rem" }}
               >
-                <Link href="http://localhost:3000/Articles/100">
+                <Link href="/Articles/100">
                   {" "}
                   How To Optimize Your Website For Local Search in 2024 SEO
                 </Link>
