@@ -7,6 +7,7 @@ import User from "../../../app/assets/user-1.jpg";
 import Nav from "../../../components/shared/Nav";
 import Subscribe from "../../Section/Subscribe/Subscribe";
 import Footer from "../../Section/Footer/Footer";
+import Link from "next/link";
 
 const Read = async ({ params: { id } }) => {
   console.log(id);
@@ -43,7 +44,7 @@ const Read = async ({ params: { id } }) => {
                   alt="User"
                 />
                 <span className="py-3 text-black text-sm font-semibold">
-                  Anas Yakubu /{" "}
+                  <Link href={`/Profile/${id}`}> Anas Yakubu</Link> /
                 </span>
                 <span className="py-3 text-black text-sm font-semibold">
                   April 11 2024
