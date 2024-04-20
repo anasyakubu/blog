@@ -12,8 +12,11 @@ const Add = () => {
         <div className="lg:px-6 py-1">
           <div className="p-5">
             <div className="space-y-2 lg:grid lg:grid-cols-2 lg:gap-x-6 lg:space-y-0">
-              <div className="bg-black text-white rounded-2xl shadow-xl p-5 py-10">
-                <h2 className="text-2xl font-extrabold text-white">
+              <div className="bg-black text-white rounded-2xl shadow-2xl p-6 py-10">
+                <h2
+                  className="text-2xl font-extrabold text-white"
+                  style={{ fontSize: "3rem", lineHeight: "3.5rem" }}
+                >
                   Create a Blog Post
                 </h2>
                 <p className="mt-5 text-sm">
@@ -34,10 +37,11 @@ const Add = () => {
                       rows="10"
                       placeholder="Text Here"
                     ></textarea>
-                    <div className="mt-5">
+                    <div className="mt-5 flex justify-between gap-5">
                       <Button className="bg-white text-black hover:bg-[#f4f4f4]">
                         Post
                       </Button>
+                      <Button variant="destructive">Cancel</Button>
                     </div>
                   </form>
                 </div>

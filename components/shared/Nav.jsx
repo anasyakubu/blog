@@ -27,7 +27,10 @@ export default function Nav() {
         >
           <div className="flex lg:flex-1">
             <a href="#" className="-m-1.5 p-1.5">
-              <span className="sr-only">Your Company</span>
+              {/* <span className="sr-only">Your Company</span> */}
+              <span className="text-black font-extrabold text-xl">
+                techblog
+              </span>
 
               {/* <Image className="h-16 w-auto" src={Logo} alt="Logo" /> */}
             </a>
@@ -74,7 +77,7 @@ export default function Nav() {
           <Dialog.Panel className="fixed inset-y-0 right-0 z-50 w-full overflow-y-auto bg-white px-6 py-6 sm:max-w-sm sm:ring-1 sm:ring-gray-900/10">
             <div className="flex items-center justify-between">
               <a href="#" className="-m-1.5 p-1.5">
-                <span className="sr-only">Your Company</span>
+                {/* <span className="sr-only">Your Company</span> */}
                 {/* <Image className="h-12 w-auto" src={Logo} alt="Logo" /> */}
               </a>
               <button

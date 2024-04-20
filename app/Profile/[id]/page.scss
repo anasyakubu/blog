@@ -1,0 +1,15 @@
+// .Profile {
+
+// }
+
+@media (max-width: 600px) {
+  .Profile {
+    .p-5 {
+      padding: 2%;
+    }
+    .textSection {
+      display: flex;
+      justify-content: center;
+    }
+  }
+}

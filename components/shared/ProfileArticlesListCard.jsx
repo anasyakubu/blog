@@ -4,9 +4,9 @@ import User from "../../app/assets/user-1.jpg";
 import Link from "next/link";
 import { Button } from "../ui/button";
 
-const AccountArticlesListCard = ({ userImg, user, id, title, created_at }) => {
+const ProfileArticlesListCard = ({ userImg, user, id, title, created_at }) => {
   return (
-    <div className="AccountArticlesListCard">
+    <div className="ProfileArticlesListCard">
       <div className="p-3 m-2 bg-white text-black border border-black rounded-xl shadow-xl">
         <div className="">
           <div className="flex gap-5">
@@ -16,7 +16,9 @@ const AccountArticlesListCard = ({ userImg, user, id, title, created_at }) => {
             </span>
             <span className="text-xl py-2 font-light">
               <small className="font-semibold ">
-                <Link href="http://localhost:3000/Profile/222">Me</Link>
+                <Link href="http://localhost:3000/Profile/222">
+                  Anas Yakubu
+                </Link>
               </small>{" "}
             </span>
           </div>
@@ -37,9 +39,10 @@ const AccountArticlesListCard = ({ userImg, user, id, title, created_at }) => {
               <p className="mt-3 text-sm font-light p-2">
                 Copy Writing Marketing
               </p>
-              <div className="mt-3 flex justify-between gap-3">
-                <Button>Update</Button>
-                <Button variant="destructive">Delete</Button>
+              <div className="mt-3">
+                <Link href="http://localhost:3000/Articles/100">
+                  <Button>Continue Reading</Button>
+                </Link>
               </div>
             </div>
           </div>
@@ -49,4 +52,4 @@ const AccountArticlesListCard = ({ userImg, user, id, title, created_at }) => {
   );
 };
 
-export default AccountArticlesListCard;
+export default ProfileArticlesListCard;

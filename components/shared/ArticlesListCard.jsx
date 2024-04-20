@@ -3,7 +3,7 @@ import Image from "next/image";
 import User from "../../app/assets/user-1.jpg";
 import Link from "next/link";
 
-const ArticlesListCard = () => {
+const ArticlesListCard = ({ userImg, user, id, title, created_at }) => {
   return (
     <div className="ArticlesListCard">
       <div className="p-3 m-2 bg-white text-black border border-black rounded-xl shadow-xl">
@@ -15,7 +15,9 @@ const ArticlesListCard = () => {
             </span>
             <span className="text-xl py-2 font-light">
               <small className="font-semibold ">
-                <Link href="/">Anas Yakubu</Link>
+                <Link href="http://localhost:3000/Profile/222">
+                  Anas Yakubu
+                </Link>
               </small>{" "}
             </span>
           </div>
@@ -25,7 +27,7 @@ const ArticlesListCard = () => {
                 className="text-2xl font-bold text-black hover:underline"
                 style={{ fontSize: "1.5rem", lineHeight: "2.2rem" }}
               >
-                <Link href="/">
+                <Link href="http://localhost:3000/Articles/100">
                   {" "}
                   How To Optimize Your Website For Local Search in 2024 SEO
                 </Link>

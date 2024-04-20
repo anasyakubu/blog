@@ -6,7 +6,7 @@ import { Button } from "../../../components/ui/button";
 import Link from "next/link";
 import "./ArticlesListPage.scss";
 
-const ArticlesListPage = () => {
+const ArticlesListPage = ({ userImg, user, id, title, created_at }) => {
   return (
     <div className="ArticlesListPage">
       <div className="p-10">
@@ -28,7 +28,9 @@ const ArticlesListPage = () => {
                   {" "}
                   by{" "}
                   <small className="font-semibold underline">
-                    <Link href="/">Anas Yakubu</Link>
+                    <Link href="http://localhost:3000/Profile/222">
+                      Anas Yakubu
+                    </Link>
                   </small>{" "}
                   on <b>April 11, 2024</b>
                 </span>
@@ -38,7 +40,9 @@ const ArticlesListPage = () => {
                   className="text-2xl font-bold text-black hover:underline"
                   style={{ fontSize: "2rem", lineHeight: "2rem" }}
                 >
-                  <Link href="/">The Ultimate Guide To Email Marketing</Link>
+                  <Link href="http://localhost:3000/Articles/100">
+                    The Ultimate Guide To Email Marketing
+                  </Link>
                 </h2>
                 <p className="mt-3 text-sm p-2">Email Marketing</p>
               </div>
@@ -50,7 +54,9 @@ const ArticlesListPage = () => {
                 </p>
               </div>
               <div className="mt-5">
-                <Button>Continue Reading</Button>
+                <Link href="http://localhost:3000/Articles/100">
+                  <Button>Continue Reading</Button>
+                </Link>
               </div>
             </div>
           </div>
@@ -92,7 +98,9 @@ const ArticlesListPage = () => {
                   {" "}
                   by{" "}
                   <small className="font-semibold underline">
-                    <Link href="/">Anas Yakubu</Link>
+                    <Link href="http://localhost:3000/Profile/222">
+                      Anas Yakubu
+                    </Link>
                   </small>{" "}
                   on <b>April 11, 2024</b>
                 </span>
@@ -102,7 +110,9 @@ const ArticlesListPage = () => {
                   className="text-2xl font-bold text-black hover:underline"
                   style={{ fontSize: "2rem", lineHeight: "2rem" }}
                 >
-                  <Link href="/">The Ultimate Guide To Email Marketing</Link>
+                  <Link href="http://localhost:3000/Articles/100">
+                    The Ultimate Guide To Email Marketing
+                  </Link>
                 </h2>
                 <p className="mt-3 text-sm p-2">Email Marketing</p>
               </div>
@@ -114,7 +124,9 @@ const ArticlesListPage = () => {
                 </p>
               </div>
               <div className="mt-5">
-                <Button>Continue Reading</Button>
+                <Link href="http://localhost:3000/Articles/100">
+                  <Button>Continue Reading</Button>
+                </Link>
               </div>
             </div>
           </div>
