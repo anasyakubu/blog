@@ -1,4 +1,6 @@
-import React from "react";
+"use client";
+import React, { useState } from "react";
+import { GoogleGenerativeAI } from "@google/generative-ai";
 import "./page.scss";
 import Nav from "../../../components/shared/Nav";
 import Footer from "../../Section/Footer/Footer";
@@ -7,6 +9,37 @@ import Image from "next/image";
 import Robot from "../../assets/Android-pana.svg";
 
 const Add = () => {
+  const genAI = new GoogleGenerativeAI(
+    "AIzaSyCzHfb2mXLWWYbjVLUANexHlqB7SvpePy4"
+  );
+
+  const [title, setTitle] = useState("");
+  const [aiResponse, setResponse] = useState("");
+  const [loading, setLoading] = useState(false);
+
+  /**
+   * Generative AI Call to fetch text insights
+   */
+  async function generateArticle() {
+    setLoading(true);
+    setResponse("");
+    const model = genAI.getGenerativeModel({ model: "gemini-pro" });
+    const prompt = `Generate and article with this title : ${title}`;
+    const result = await model.generateContent(prompt);
+    const response = await result.response;
+    const text = response.text();
+    setResponse(text);
+    setLoading(false);
+  }
+
+  const handleChangeTitle = (e) => {
+    setTitle(e.target.value);
+  };
+
+  const handleClick = () => {
+    generateArticle();
+  };
+
   return (
     <div className="Add">
       <div className="inset-0 -z-10 h-full w-full bg-white bg-[linear-gradient(to_right,#f0f0f0_1px,transparent_1px),linear-gradient(to_bottom,#f0f0f0_1px,transparent_1px)] bg-[size:6rem_4rem]">
@@ -29,16 +62,44 @@ const Add = () => {
                     <input
                       className="w-full p-3 rounded-xl outline-none border text-black border-black"
                       type="text"
+                      id="title"
+                      name="title"
                       placeholder="Title"
+                      onChange={(e) => handleChangeTitle(e)}
                     />
-                    <textarea
+                    {/* <textarea
                       className="w-full mt-5 p-3 rounded-xl outline-none border text-black border-black"
                       name=""
                       id=""
                       cols="30"
                       rows="10"
                       placeholder="Text Here"
-                    ></textarea>
+                      value=""
+                    ></textarea> */}
+                    {loading === true && aiResponse === "" ? (
+                      <textarea
+                        className="w-full mt-5 p-3 rounded-xl outline-none border text-black border-black"
+                        name=""
+                        id=""
+                        cols="30"
+                        rows="10"
+                        placeholder="Loading.."
+                        value=""
+                      ></textarea>
+                    ) : (
+                      <div>
+                        <p className="text-sm mt-3 text-black"></p>
+                        <textarea
+                          className="w-full mt-5 p-3 rounded-xl outline-none border text-black border-black"
+                          name=""
+                          id=""
+                          cols="30"
+                          rows="10"
+                          placeholder="Text Here"
+                          value={aiResponse}
+                        ></textarea>
+                      </div>
+                    )}
                     <div className="mt-5 flex justify-between gap-5">
                       <Button className="bg-white text-black hover:bg-[#f4f4f4]">
                         Post
@@ -60,7 +121,9 @@ const Add = () => {
                       Enter a Title to use AI to generate and Article
                     </p>
                     <div className="mt-5">
-                      <Button>Generate Article</Button>
+                      <Button onClick={() => handleClick()}>
+                        Generate Article
+                      </Button>
                     </div>
                   </div>
                 </div>
