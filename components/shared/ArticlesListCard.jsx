@@ -3,7 +3,7 @@ import Image from "next/image";
 import User from "../../app/assets/user-1.jpg";
 import Link from "next/link";
 
-const ArticlesListCard = ({ userImg, user, id, title, created_at }) => {
+const ArticlesListCard = async ({ userImg, user, id, title }) => {
   return (
     <div className="ArticlesListCard">
       <div className="p-3 m-2 bg-white text-black border border-black rounded-xl shadow-xl">
@@ -15,7 +15,7 @@ const ArticlesListCard = ({ userImg, user, id, title, created_at }) => {
             </span>
             <span className="text-xl py-2 font-light">
               <small className="font-semibold ">
-                <Link href={`/Profile/${id}`}>Anas Yakubu</Link>
+                <Link href={`/Profile/${id}`}>{user}</Link>
               </small>{" "}
             </span>
           </div>
@@ -25,10 +25,7 @@ const ArticlesListCard = ({ userImg, user, id, title, created_at }) => {
                 className="text-2xl font-bold text-black hover:underline"
                 style={{ fontSize: "1.5rem", lineHeight: "2.2rem" }}
               >
-                <Link href={`/Articles/${id}`}>
-                  {" "}
-                  How To Optimize Your Website For Local Search in 2024 SEO
-                </Link>
+                <Link href={`/Articles/${id}`}>{title}</Link>
               </h2>
               <p className="mt-5 text-sm font-light p-2">
                 Copy Writing Marketing

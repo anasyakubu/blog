@@ -9,7 +9,6 @@
     "lint": "next lint"
   },
   "dependencies": {
-    "@clerk/nextjs": "^5.0.1",
     "@google/generative-ai": "^0.7.1",
     "@headlessui/react": "^1.7.19",
     "@heroicons/react": "^2.1.3",
