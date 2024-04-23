@@ -7,6 +7,7 @@ import Footer from "../../Section/Footer/Footer";
 import { Button } from "../../../components/ui/button";
 import Image from "next/image";
 import Robot from "../../assets/Android-pana.svg";
+import { addBlog } from "../../../lib/actions/blog.action";
 
 const Add = () => {
   const genAI = new GoogleGenerativeAI(
@@ -58,7 +59,7 @@ const Add = () => {
                   Lorem ipsum dolor sit amet consectetur adipisicing elit.
                 </p>
                 <div className="mt-10">
-                  <form action="">
+                  <form action={addBlog}>
                     <input
                       className="w-full p-3 rounded-xl outline-none border text-black border-black"
                       type="text"
@@ -79,8 +80,8 @@ const Add = () => {
                     {loading === true && aiResponse === "" ? (
                       <textarea
                         className="w-full mt-5 p-3 rounded-xl outline-none border text-black border-black"
-                        name=""
-                        id=""
+                        name="article"
+                        id="article"
                         cols="30"
                         rows="10"
                         placeholder="Loading.."
@@ -91,8 +92,8 @@ const Add = () => {
                         <p className="text-sm mt-3 text-black"></p>
                         <textarea
                           className="w-full mt-5 p-3 rounded-xl outline-none border text-black border-black"
-                          name=""
-                          id=""
+                          name="article"
+                          id="article"
                           cols="30"
                           rows="10"
                           placeholder="Text Here"
@@ -100,8 +101,19 @@ const Add = () => {
                         ></textarea>
                       </div>
                     )}
+                    <input
+                      className="w-full mt-5 p-3 rounded-xl outline-none border text-black border-black"
+                      type="text"
+                      id="tag"
+                      name="tag"
+                      placeholder="#web develop"
+                      onChange={(e) => handleChangeTitle(e)}
+                    />
                     <div className="mt-5 flex justify-between gap-5">
-                      <Button className="bg-white text-black hover:bg-[#f4f4f4]">
+                      <Button
+                        type="submit"
+                        className="bg-white text-black hover:bg-[#f4f4f4]"
+                      >
                         Post
                       </Button>
                       <Button variant="destructive">Cancel</Button>
