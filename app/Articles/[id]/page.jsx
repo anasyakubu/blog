@@ -8,9 +8,11 @@ import Nav from "../../../components/shared/Nav";
 import Subscribe from "../../Section/Subscribe/Subscribe";
 import Footer from "../../Section/Footer/Footer";
 import Link from "next/link";
+import { getBlog } from "../../../lib/blog.data";
 
-const Read = async ({ params: { id } }) => {
-  console.log(id);
+const Read = async ({ params }) => {
+  const { id } = params;
+  const blog = await getBlog(id);
   return (
     <div className="Read">
       {" "}
@@ -52,43 +54,8 @@ const Read = async ({ params: { id } }) => {
               </div>
             </div>
             <div className="mt-5">
-              <h3 className="text-black font-semibold text-xl">
-                Email marketing is one of the most popular marketing channels
-                because it’s relatively easy to use, highly effective, and
-                cheap.
-              </h3>
-              <p className="text-md mt-5 text-black">
-                Yet, implementing an email marketing strategy can feel
-                overwhelming. How do you get started? What kinds of emails
-                should you send? What email marketing software should you use?
-                What’s the difference between an average and highly effective
-                marketing strategy? This guide simplifies email marketing.
-                Whether you’re a beginner or an advanced user, it covers
-                everything you need to know to start a highly successful email
-                marketing strategy with minimal time and effort.
-              </p>
-
-              <p className="text-md mt-5 text-black">
-                Yet, implementing an email marketing strategy can feel
-                overwhelming. How do you get started? What kinds of emails
-                should you send? What email marketing software should you use?
-                What’s the difference between an average and highly effective
-                marketing strategy? This guide simplifies email marketing.
-                Whether you’re a beginner or an advanced user, it covers
-                everything you need to know to start a highly successful email
-                marketing strategy with minimal time and effort.
-              </p>
-
-              <p className="text-md mt-5 text-black">
-                Yet, implementing an email marketing strategy can feel
-                overwhelming. How do you get started? What kinds of emails
-                should you send? What email marketing software should you use?
-                What’s the difference between an average and highly effective
-                marketing strategy? This guide simplifies email marketing.
-                Whether you’re a beginner or an advanced user, it covers
-                everything you need to know to start a highly successful email
-                marketing strategy with minimal time and effort.
-              </p>
+              <h3 className="text-black font-semibold text-xl">{blog.title}</h3>
+              <p className="text-md mt-5 text-black">{blog.article}</p>
             </div>
           </div>
           {/* Subscribe */}
