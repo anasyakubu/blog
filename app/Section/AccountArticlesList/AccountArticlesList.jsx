@@ -3,7 +3,8 @@ import "./AccountArticlesList.scss";
 import AccountArticlesListCard from "../../../components/shared/AccountArticlesListCard";
 import { getBlogs } from "../../../lib/blog.data";
 
-const AccountArticlesList = () => {
+const AccountArticlesList = async () => {
+  const blogs = await getBlogs();
   return (
     <div className="AccountArticlesList">
       <div className="p-10">
