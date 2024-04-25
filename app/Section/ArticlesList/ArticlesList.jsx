@@ -15,9 +15,10 @@ const ArticlesList = async ({ id }) => {
       <div className="p-10">
         {/*      {watches.map((blogs) => (    ))}*/}
         {/*  */}
-        {blogs.map((blog) => (
-          <div className="" key={blog.id}>
-            <div className="flex flex-col md:flex-row">
+
+        <div className="">
+          {blogs.map((blog) => (
+            <div className="flex flex-col md:flex-row" key={blog.id}>
               <div className="w-full md:w-2/3 mb-4 md:mb-0 m-1 bg-white text-black rounded-xl shadow-lg p-5 lg:py-32">
                 {/* <!-- Content for the 2/3 width section --> */}
                 <div className="">
@@ -68,14 +69,14 @@ const ArticlesList = async ({ id }) => {
                 />
               </div>
             </div>
-            {/*  */}
-            {/* <div className="space-y-2 lg:grid lg:grid-cols-3 lg:gap-x-6 lg:space-y-0">
+          ))}
+          {/*  */}
+          {/* <div className="space-y-2 lg:grid lg:grid-cols-3 lg:gap-x-6 lg:space-y-0">
               <ArticlesListCard user="" title="" />
               <ArticlesListCard user="" title="" />
               <ArticlesListCard user="" title="" />
             </div> */}
-          </div>
-        ))}
+        </div>
       </div>
     </div>
   );

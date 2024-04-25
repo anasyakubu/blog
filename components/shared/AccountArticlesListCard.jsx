@@ -4,7 +4,7 @@ import User from "../../app/assets/user-1.jpg";
 import Link from "next/link";
 import { Button } from "../ui/button";
 
-const AccountArticlesListCard = ({ userImg, user, id, title, created_at }) => {
+const AccountArticlesListCard = ({ userImg, tag, id, title, created_at }) => {
   return (
     <div className="AccountArticlesListCard">
       <div className="p-3 m-2 bg-white text-black border border-black rounded-xl shadow-xl">
@@ -29,14 +29,9 @@ const AccountArticlesListCard = ({ userImg, user, id, title, created_at }) => {
                 className="text-2xl font-bold text-black hover:underline"
                 style={{ fontSize: "1.5rem", lineHeight: "2.2rem" }}
               >
-                <Link href={`/Articles/${id}`}>
-                  {" "}
-                  How To Optimize Your Website For Local Search in 2024 SEO
-                </Link>
+                <Link href={`/Articles/${id}`}> {title}</Link>
               </h2>
-              <p className="mt-3 text-sm font-light p-2">
-                Copy Writing Marketing
-              </p>
+              <p className="mt-3 text-sm font-light p-2">{tag}</p>
               <div className="mt-3 flex justify-between gap-3">
                 <Button>Update</Button>
                 <Button variant="destructive">Delete</Button>
