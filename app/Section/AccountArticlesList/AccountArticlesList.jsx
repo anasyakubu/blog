@@ -5,6 +5,9 @@ import { getBlogs } from "../../../lib/blog.data";
 
 const AccountArticlesList = async () => {
   const blogs = await getBlogs();
+
+  // console.log(blogs);
+
   return (
     <div className="AccountArticlesList">
       <div className="p-10">

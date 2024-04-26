@@ -3,7 +3,7 @@ import Image from "next/image";
 import User from "../../app/assets/user-1.jpg";
 import Link from "next/link";
 
-const ArticlesListCard = async ({ userImg, user, id, title }) => {
+const ArticlesListCard = async ({ tag, user, id, title }) => {
   return (
     <div className="ArticlesListCard">
       <div className="p-3 m-2 bg-white text-black border border-black rounded-xl shadow-xl">
@@ -27,9 +27,7 @@ const ArticlesListCard = async ({ userImg, user, id, title }) => {
               >
                 <Link href={`/Articles/${id}`}>{title}</Link>
               </h2>
-              <p className="mt-5 text-sm font-light p-2">
-                Copy Writing Marketing
-              </p>
+              <p className="mt-5 text-sm font-light p-2">{tag}</p>
             </div>
           </div>
         </div>

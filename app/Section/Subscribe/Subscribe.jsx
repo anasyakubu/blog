@@ -3,7 +3,8 @@ import "./Subscribe.scss";
 import { Button } from "../../../components/ui/button";
 import Image from "next/image";
 import NYM from "../../assets/nym.png";
-import { addSubscribers } from "../../server-action/addSubscribers";
+// import { addSubscribers } from "../../server-action/addSubscribers";
+import { addSubscriber } from "../../../lib/actions/blog.action";
 
 const Subscribe = () => {
   return (
@@ -20,7 +21,7 @@ const Subscribe = () => {
                   our free guide, The Killer and the Poet:
                 </h6>
                 <div className="mt-3">
-                  <form action={addSubscribers}>
+                  <form action={addSubscriber}>
                     <input
                       className="w-full h-full p-5 m-1 outline-none border border-black rounded-xl"
                       type="text"
