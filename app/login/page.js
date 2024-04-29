@@ -2,7 +2,7 @@
 import { signIn, useSession } from "next-auth/react";
 import { useRouter } from "next/navigation";
 import { useState } from "react";
-import styles from "./login.module.css";
+// import styles from "./login.module.css";
 import Link from "next/link";
 
 export default function Login() {
@@ -31,36 +31,34 @@ export default function Login() {
   };
 
   return (
-    <div className={styles.loginContainer}>
-      <div className={styles.wrapper}>
+    <div>
+      <div>
         <p className={error === "" ? styles.hide : styles.show}>{error}</p>
-        <form className={styles.loginForm} onSubmit={handleSignIn}>
+        <form onSubmit={handleSignIn}>
           <div>
-            <label className={styles.Label}>Email</label>
+            <label>Email</label>
             <input
               type="email"
               value={email}
               name="email"
               onChange={(e) => setEmail(e.target.value)}
-              className={styles.Input}
               placeholder="John@example.com"
             />
           </div>
           <div>
-            <label className={styles.Label}>Password</label>
+            <label>Password</label>
             <input
               type="password"
               name="password"
               value={password}
               onChange={(e) => setPassword(e.target.value)}
-              className={styles.Input}
               placeholder="******"
             />
           </div>
           <button type="submit" className={`${styles.btn} ${styles.loginBtn}`}>
             Log in
           </button>
-          <p className={styles.paragraph}>
+          <p>
             Don`t have an account?{" "}
             <Link href="/CreateAccount" className={styles.link}>
               Sign up
@@ -68,10 +66,10 @@ export default function Login() {
           </p>
         </form>
 
-        <div className={styles.orContainer}>
-          <hr className={styles.divider} />
-          <span className={styles.orText}>or</span>
-          <hr className={styles.divider} />
+        <div>
+          <hr />
+          <span>or</span>
+          <hr />
         </div>
 
         <button

@@ -20,6 +20,7 @@
     "@react-icons/all-files": "^4.1.0",
     "@supabase/auth-helpers-nextjs": "^0.10.0",
     "@supabase/supabase-js": "^2.42.5",
+    "@tinymce/tinymce-react": "^5.0.1",
     "@uploadthing/react": "^6.5.0",
     "axios": "^1.6.8",
     "bcryptjs": "^2.4.3",

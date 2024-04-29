@@ -62,4 +62,12 @@ export const options = {
   pages: {
     signIn: "/login",
   },
+  callbacks: {
+    async signIn(user, account, profile) {
+      if (user) {
+        return true; // Allow sign in
+      }
+      return false; // Do not allow sign in
+    },
+  },
 };

@@ -14,6 +14,10 @@ const BlogSchema = new mongoose.Schema(
       type: String,
       required: true,
     },
+    articleImage: {
+      type: String,
+      required: true,
+    },
   },
   { timestamps: true }
 );

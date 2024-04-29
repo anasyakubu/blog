@@ -1,20 +1,21 @@
 "use client";
 import React, { useState } from "react";
-import { UploadButton } from "../../../utils/uploadthing";
+import { UploadButton, UploadDropzone } from "../../../utils/uploadthing";
 
 const ImageUpload = () => {
-  const [imageUrl, setImageUrl] = useState("");
+  const [imageUrl, setImageUrl] = useState<string>("");
   return (
     <div>
-      <UploadButton
+      <UploadDropzone
+        className="bg-white text-black"
         endpoint="imageUploader"
         onClientUploadComplete={(res) => {
           // Do something with the response
           console.log("Files: ", res);
-          setImageUrl(res[0]);
+          setImageUrl(res[0].url);
           alert("Upload Completed");
         }}
-        onUploadError={(Error) => {
+        onUploadError={(error: Error) => {
           // Do something with the error.
           alert(`ERROR! ${error.message}`);
         }}

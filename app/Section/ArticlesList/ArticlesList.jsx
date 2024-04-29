@@ -10,12 +10,13 @@ import "./ArticlesList.scss";
 
 const ArticlesList = async ({ id }) => {
   const blogs = await getBlogs();
+  const firstThreeBlogs = blogs.slice(0, 3);
   return (
     <div className="ArticlesList">
       <div className="p-10">
         <div className="">
           <div className="space-y-2 lg:grid lg:grid-cols-3 lg:gap-x-6 lg:space-y-0">
-            {blogs.map((blog) => (
+            {firstThreeBlogs.map((blog) => (
               <div key={blog.id}>
                 <ArticlesListCard
                   title={blog.title}
